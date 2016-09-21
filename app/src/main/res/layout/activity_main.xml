@@ -5,57 +5,9 @@
     android:layout_height="match_parent"
     tools:context="kaka.microwu.com.ptrwebview.MainActivity">
 
-    <!-- webview-->
-    <WebView
-        android:id="@+id/web_view"
+    <RelativeLayout
+        android:id="@+id/web_view_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"/>
 
-    <!-- header layout-->
-    <LinearLayout
-        android:id="@+id/web_view_header_layout"
-        android:layout_width="120dp"
-        android:layout_height="60dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="-60dp"
-        android:orientation="horizontal">
-
-        <!-- left area : arrow image-->
-        <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="60dp"
-            android:layout_weight="3">
-            <ImageView
-                android:id="@+id/pull_to_refresh_arrow"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:src="@mipmap/arrow"
-                android:visibility="visible"/>
-
-            <!-- loading gif -->
-            <pl.droidsonroids.gif.GifTextView
-                android:id="@+id/pull_to_refresh_progress_bar"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_centerInParent="true"
-                android:background="@drawable/pull_to_refresh_progress"
-                android:visibility="gone"/>
-        </RelativeLayout>
-
-        <!-- right area : text view -->
-        <LinearLayout
-            android:layout_width="0dip"
-            android:layout_height="60dip"
-            android:layout_weight="12"
-            android:orientation="horizontal" >
-            <TextView
-                android:id="@+id/pull_to_refresh_description"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical"
-                android:textAlignment="center"
-                android:text="继续下拉刷新" />
-        </LinearLayout>
-    </LinearLayout>
 </RelativeLayout>
