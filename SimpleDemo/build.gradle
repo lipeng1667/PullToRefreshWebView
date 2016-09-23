@@ -26,5 +26,6 @@ dependencies {
     // load GIF
     compile 'pl.droidsonroids.gif:android-gif-drawable:1.1.17'
     // pull-to-refresh webview
-    compile project(':ptrwebview')
+    //compile project(':ptrwebview')
+    compile 'com.microwu.ptrwebviewlibray:ptrwebview:1.0.0'
 }

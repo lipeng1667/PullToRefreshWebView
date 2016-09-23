@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Web.iml" filepath="$PROJECT_DIR$/Web.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PullToRefreshWebView.iml" filepath="$PROJECT_DIR$/PullToRefreshWebView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SimpleDemo/SimpleDemo.iml" filepath="$PROJECT_DIR$/SimpleDemo/SimpleDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/ptrwebview/ptrwebview.iml" filepath="$PROJECT_DIR$/ptrwebview/ptrwebview.iml" />
     </modules>
   </component>

@@ -1,4 +1,6 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'com.github.dcendents.android-maven'
 
 android {
     compileSdkVersion 23
@@ -18,6 +20,9 @@ android {
     }
 }
 
+group = 'com.microwu.ptrwebviewlibray'
+version = '1.0.0'
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
@@ -25,4 +30,50 @@ dependencies {
 
     // load GIF
     compile 'pl.droidsonroids.gif:android-gif-drawable:1.1.17'
+}
+
+task generateSourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier 'sources'
+}
+
+task generateJavadocs(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+
+task generateJavadocsJar(type: Jar, dependsOn: generateJavadocs) {
+    from generateJavadocs.destinationDir
+    classifier 'javadoc'
+}
+
+artifacts {
+    archives generateJavadocsJar
+    archives generateSourcesJar
+}
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+bintray {
+    user = properties.getProperty("bintray.user")
+    key = properties.getProperty("bintray.apikey")
+
+    pkg {
+        repo = 'PTRWebView'
+        name = 'com.microwu.ptrwebviewlibrary'
+
+        version {
+            name = '1.0.0-release'
+            desc = "Allow WebView to pull-to-refresh in Android"
+            vcsTag = '1.0.0'
+        }
+
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/lipeng1667/PullToRefreshWebView.git'
+        websiteUrl = 'https://github.com/lipeng1667/PullToRefreshWebView'
+    }
+
+    configurations = ['archives']
+
 }
