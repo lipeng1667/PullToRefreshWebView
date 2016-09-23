@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         ptr_web_view_ = new PullToRefreshWebView(this,null);
         RelativeLayout container = (RelativeLayout) findViewById(R.id.web_view_container);
         container.addView(ptr_web_view_);
-        ptr_web_view_.loadUrl("http://www.baidu.com");
+        ptr_web_view_.loadUrl("http://www.microwu.com");
     }
 
     /**
