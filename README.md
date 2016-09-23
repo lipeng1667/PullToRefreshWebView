@@ -6,9 +6,8 @@ Allow your WebView pull-to-refresh in Android.
 ## Overview
 Here is an example:
 
-<p align="center">
-  <img src="http://7xqppk.com1.z0.glb.clouddn.com/20160923/00.gif">
-</p>
+![demo](ScreenShot/pull_to_refresh.gif)
+
 
 ## Setup
 
