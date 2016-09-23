@@ -23,9 +23,6 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.2.1'
-    // load GIF
-    compile 'pl.droidsonroids.gif:android-gif-drawable:1.1.17'
     // pull-to-refresh webview
-    //compile project(':ptrwebview')
     compile 'com.microwu.ptrwebviewlibray:ptrwebview:1.0.0'
 }
